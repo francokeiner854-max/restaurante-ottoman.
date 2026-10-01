@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ottoman - Cocina Turca | Auténtico Döner Kebab & Té Turco en North Point Mall</title>
+  <meta name="description" content="Descubre la auténtica cocina turca en Bogotá. Döner Kebab, Dürüm, Köfte, Té Turco y Baklava en el CC North Point Mall, Local 28 B. Pide directo por WhatsApp.">
+  
+  <!-- Favicon / Theme -->
+  <meta name="theme-color" content="#7BC043">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <style>
+    /* ==========================================
+       VARIABLES Y PALETA DE COLORES (FACHADA REAL)
+       ========================================== */
+    :root {
+      --primary: #7BC043;
+      --primary-dark: #5C9A2F;
+      --primary-light: #EBF7E3;
+      --accent-yellow: #FFD100;
+      --accent-yellow-dark: #E6BB00;
+      --dark-bg: #1B2416;
+      --dark-card: #232E1E;
+      --text-main: #1D271A;
+      --text-muted: #5C6858;
+      --bg-body: #FAFDF8;
+      --bg-card: #FFFFFF;
+      --border-color: #E2EDE0;
+      --shadow-sm: 0 4px 12px rgba(123, 192, 67, 0.08);
+      --shadow-md: 0 8px 24px rgba(27, 36, 22, 0.12);
+      --shadow-lg: 0 16px 36px rgba(27, 36, 22, 0.18);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--dark-bg);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Background Pattern Overlay */
+    .pattern-bg {
+      background-image: radial-gradient(rgba(123, 192, 67, 0.12) 1px, transparent 1px), radial-gradient(rgba(255, 209, 0, 0.15) 1px, #FAFDF8 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Component: Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(123, 192, 67, 0.35);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(123, 192, 67, 0.45);
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1EBE5B;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-yellow {
+      background-color: var(--accent-yellow);
+      color: var(--dark-bg);
+      box-shadow: 0 6px 20px rgba(255, 209, 0, 0.35);
+    }
+
+    .btn-yellow:hover {
+      background-color: var(--accent-yellow-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 209, 0, 0.45);
+    }
+
+    .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      background-color: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-3px);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+
+    /* Section Title Styles */
+    .section-header {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 48px auto;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      color: var(--dark-bg);
+    }
+
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================
+       1. HEADER / NAVEGACIÓN
+       ========================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--dark-bg);
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 10px rgba(123, 192, 67, 0.3);
+    }
+
+    .logo-text span {
+      color: var(--primary-dark);
+    }
+
+    .logo-sub {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent-yellow-dark);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: -3px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-main);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary-dark);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: var(--primary);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: var(--dark-bg);
+      cursor: pointer;
+    }
+
+    /* ==========================================
+       2. HERO SECTION
+       ========================================== */
+    .hero {
+      position: relative;
+      padding: 60px 0 100px 0;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content {
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background-color: #FFF9D6;
+      border: 1px solid var(--accent-yellow);
+      color: #8A6D00;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: 3.3rem;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--dark-bg);
+    }
+
+    .hero-title span {
+      color: var(--primary-dark);
+      position: relative;
+    }
+
+    .hero-title span::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-color: rgba(255, 209, 0, 0.4);
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .hero-info-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .info-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-pill-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .info-pill-text {
+      font-size: 0.9rem;
+    }
+
+    .info-pill-text strong {
+      display: block;
+      color: var(--dark-bg);
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-img-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid #FFFFFF;
+    }
+
+    .hero-img-wrapper img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .hero-img-wrapper:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      background: #FFFFFF;
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-left: 5px solid var(--accent-yellow);
+      z-index: 10;
+    }
+
+    .floating-card-icon {
+      font-size: 2rem;
+      color: var(--accent-yellow-dark);
+    }
+
+    .floating-card-title {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--dark-bg);
+    }
+
+    .floating-card-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================
+       3. SECCIÓN MENÚ DIGITAL & CARTA IMPRESA
+       ========================================== */
+    .menu-section {
+      padding: 90px 0;
+      background-color: #FFFFFF;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Carta Impresa Showcase */
+    .physical-menu-box {
+      background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-card) 100%);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      color: #FFFFFF;
+      margin-bottom: 70px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .physical-menu-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .physical-menu-header h3 {
+      color: #FFFFFF;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .physical-menu-header p {
+      color: #B2C4AC;
+    }
+
+    .menu-images-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .menu-image-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      transition: var(--transition);
+      background-color: #000;
+    }
+
+    .menu-image-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .menu-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27, 36, 22, 0.85) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      opacity: 0.9;
+      transition: var(--transition);
+    }
+
+    .menu-image-card:hover {
+      border-color: var(--accent-yellow);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .menu-image-card:hover img {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+
+    .menu-card-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-yellow);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .menu-card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Menú Interactivo Tabs */
+    .menu-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 12px 24px;
+      border-radius: 30px;
+      background-color: var(--primary-light);
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .tab-btn:hover {
+      background-color: #DBF0CE;
+    }
+
+    .tab-btn.active {
+      background-color: var(--primary-dark);
+      color: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(92, 154, 47, 0.3);
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dishes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .dish-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .dish-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .dish-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+
+    .dish-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark-bg);
+    }
+
+    .dish-price {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .dish-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .dish-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px dashed var(--border-color);
+    }
+
+    .dish-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #8A6D00;
+      background: #FFF9D6;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* ==========================================
+       4. GALERÍA DE PLATOS Y EXPERIENCIA
+       ========================================== */
+    .gallery-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background-color: var(--dark-bg);
+      cursor: pointer;
+      height: 280px;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27, 36, 22, 0.9) 0%, rgba(27, 36, 22, 0.2) 60%, transparent 100%);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-card:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent-yellow);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .gallery-caption {
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .gallery-btn {
+      align-self: flex-start;
+    }
+
+    .gallery-disclaimer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+      background-color: var(--primary-light);
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px dashed var(--primary);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================
+       5. HORARIOS Y UBICACIÓN
+       ========================================== */
+    .info-section {
+      padding: 90px 0;
+      background-color: #FFFFFF;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .location-card {
+      background: linear-gradient(145deg, #FAFDF8 0%, #EFF7EC 100%);
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .location-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .location-icon-box {
+      width: 56px;
+      height: 56px;
+      background-color: var(--primary);
+      color: #FFFFFF;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 6px 16px rgba(123, 192, 67, 0.35);
+    }
+
+    .location-header h3 {
+      font-size: 1.8rem;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-item-icon {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-top: 2px;
+    }
+
+    .info-item-content strong {
+      display: block;
+      color: var(--dark-bg);
+      font-size: 1.05rem;
+    }
+
+    .info-item-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .schedule-box {
+      background: var(--dark-bg);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .schedule-box h3 {
+      color: #FFFFFF;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .schedule-box h3 i {
+      color: var(--accent-yellow);
+    }
+
+    .schedule-table {
+      width: 100%;
+      margin-bottom: 28px;
+    }
+
+    .schedule-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 1rem;
+    }
+
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-day {
+      color: #D5E5D0;
+      font-weight: 500;
+    }
+
+    .schedule-time {
+      font-weight: 700;
+      color: var(--accent-yellow);
+    }
+
+    .schedule-row.closed .schedule-time {
+      color: #FF6B6B;
+    }
+
+    .price-badge-box {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .price-badge-box span {
+      font-size: 0.85rem;
+      color: #B2C4AC;
+      display: block;
+    }
+
+    .price-badge-box strong {
+      font-size: 1.2rem;
+      color: #FFFFFF;
+    }
+
+    /* ==========================================
+       6. FOOTER Y BOTÓN FLOTANTE
+       ========================================== */
+    .footer {
+      background-color: var(--dark-bg);
+      color: #B2C4AC;
+      padding: 60px 0 30px 0;
+      border-top: 4px solid var(--primary);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .logo {
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      max-width: 400px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-title {
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-links display: flex;
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: #B2C4AC;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-yellow);
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.85rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 64px;
+      height: 64px;
+      background-color: #25D366;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+      z-index: 999;
+      transition: var(--transition);
+      animation: pulseWhatsApp 2s infinite;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+      background-color: #1EBE5B;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.7);
+    }
+
+    .floating-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background-color: var(--accent-yellow);
+      color: var(--dark-bg);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 12px;
+      border: 2px solid #FFFFFF;
+      white-space: nowrap;
+    }
+
+    @keyframes pulseWhatsApp {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ==========================================
+       MODAL LIGHTBOX
+       ========================================== */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(15, 20, 14, 0.92);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .lightbox-caption {
+      margin-top: 16px;
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: -10px;
+      background: none;
+      border: none;
+      color: #FFFFFF;
+      font-size: 2.2rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .lightbox-close:hover {
+      color: var(--accent-yellow);
+      transform: scale(1.1);
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-title {
+        font-size: 2.6rem;
+      }
+      .menu-images-grid {
+        grid-template-columns: 1fr;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: #FFFFFF;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        transition: var(--transition);
+        box-shadow: var(--shadow-lg);
+      }
+      .nav-menu.active {
+        left: 0;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body class="pattern-bg">
+
+  <!-- ==========================================
+       1. HEADER / NAVEGACIÓN
+       ========================================== -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div class="logo-text">
+          OTTOMAN <span>Cocina Turca</span>
+          <span class="logo-sub">TÜRK MUTFAĞI</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#menu" class="nav-link">Menú Digital</a>
+        <a href="#galeria" class="nav-link">Galería</a>
+        <a href="#ubicacion" class="nav-link">Horarios & Ubicación</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20o%20consultar%20el%20men%C3%BA." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         2. HERO SECTION (PORTADA)
+         ========================================== -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-badge">
+              <i class="fa-solid fa-certificate"></i> 100% Auténtica Cocina Turca en Bogotá
+            </div>
+            
+            <h1 class="hero-title">
+              La Auténtica <span>Cocina Turca</span> en North Point Mall
+            </h1>
+            
+            <p class="hero-subtitle">
+              Disfruta del exquisito sabor de Estambul: Döner Kebab recién preparado, Dürüm tradicional, jugosas brochetas Köfte, aromático Té Turco y crujiente Baklava de pistacho.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#menu" class="btn btn-primary">
+                <i class="fa-solid fa-book-open"></i> Ver Menú Digital
+              </a>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Quiero%20hacer%20un%20pedido." target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+              </a>
+            </div>
+
+            <div class="hero-info-pills">
+              <div class="info-pill">
+                <div class="info-pill-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-pill-text">
+                  <strong>North Point Mall</strong>
+                  <span>Local 28 B - Cra. 7 #155-80</span>
+                </div>
+              </div>
+
+              <div class="info-pill">
+                <div class="info-pill-icon"><i class="fa-solid fa-tag"></i></div>
+                <div class="info-pill-text">
+                  <strong>Precios Promedio</strong>
+                  <span>$20.000 - $40.000 COP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-img-wrapper">
+              <img src="local-ottoman.jpg" alt="Fachada y Local Ottoman Cocina Turca" onerror="this.onerror=null; this.src='local-ottoman.jpg.png';">
+            </div>
+
+            <div class="hero-floating-card">
+              <div class="floating-card-icon">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <div class="floating-card-title">Recetas Tradicionales</div>
+                <div class="floating-card-sub">Ingredientes auténticos y preparación diaria</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. SECCIÓN DE MENÚ DIGITAL / CARTA
+         ========================================== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-utensils"></i> Nuestra Carta</span>
+          <h2 class="section-title">Menú Digital & Platos Destacados</h2>
+          <p class="section-subtitle">Explora nuestra carta física oficial o navega por categorías para hacer tu pedido directamente por WhatsApp.</p>
+        </div>
+
+        <!-- Muestra de Fotos de la Carta Impresa -->
+        <div class="physical-menu-box">
+          <div class="physical-menu-header">
+            <h3><i class="fa-solid fa-book-open"></i> Carta Impresa Oficial del Restaurante</h3>
+            <p>Haz clic en cualquier imagen del menú para ampliarla en alta resolución</p>
+          </div>
+
+          <div class="menu-images-grid">
+            
+            <div class="menu-image-card" onclick="openLightbox('menu1.jpg', 'Carta Ottoman - Página 1')">
+              <img src="menu1.jpg" alt="Carta Impresa Ottoman 1" onerror="this.onerror=null; this.src='menu1.jpg.png';">
+              <div class="menu-image-overlay">
+                <span class="menu-card-tag">Menú Físico</span>
+                <div class="menu-card-title">
+                  <span>Página 1: Kebabs & Dürüms</span>
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-image-card" onclick="openLightbox('menu2.jpg', 'Carta Ottoman - Página 2')">
+              <img src="menu2.jpg" alt="Carta Impresa Ottoman 2" onerror="this.onerror=null; this.src='menu2.jpg.png';">
+              <div class="menu-image-overlay">
+                <span class="menu-card-tag">Menú Físico</span>
+                <div class="menu-card-title">
+                  <span>Página 2: Platos & Combos</span>
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-image-card" onclick="openLightbox('menu3.jpg', 'Carta Ottoman - Página 3')">
+              <img src="menu3.jpg" alt="Carta Impresa Ottoman 3" onerror="this.onerror=null; this.src='menu3.jpg.png';">
+              <div class="menu-image-overlay">
+                <span class="menu-card-tag">Menú Físico</span>
+                <div class="menu-card-title">
+                  <span>Página 3: Postres & Bebidas</span>
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Categorías de Menú Interactivo -->
+        <div class="menu-tabs">
+          <button class="tab-btn active" onclick="switchTab(event, 'tab-kebabs')">🥙 Kebabs & Dürüms</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-especiales')">🍽️ Platos Especiales</button>
+          <button class="tab-btn" onclick="switchTab(event, 'tab-postres')">🍵 Té & Postres Turcos</button>
+        </div>
+
+        <!-- TAB 1: Kebabs -->
+        <div id="tab-kebabs" class="tab-content active">
+          <div class="dishes-grid">
+            
+            <div class="dish-card">
+              <div>
+                <div class="dish-header">
+                  <h3 class="dish-title">Döner Kebab Tradicional</h3>
+                  <span class="dish-price">$24.000 COP</span>
+                </div>
+                <p class="dish-desc">Deliciosas láminas de carne sazonada al estilo turco, servidas en pan pita recién horneado con vegetales frescos y salsa especial de yogur con hierbas.</p>
+              </div>
+              <div class="dish-footer">
+                <span class="dish-badge"><i class="fa-solid fa-fire"></i> El más vendido</span>
+                <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20pedir%20un%20D%C3%B6ner%20Kebab%20Tradicional." target="_blank" class="btn btn-whatsapp btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+
+            <div class="dish-card">
+              <div>
+                <div class="dish-header">
+                  <h3 class="dish-title">Dürüm Kebab Especial</h3>
+                  <span class="dish-price">$26.000 COP</span>
+                </div>
+                <p class="dish-desc">Carne döner enrollada en fina tortilla turca (lavaş) tostada a la plancha, acompañada de ensalada fresca, tomate y salsas de la casa.</p>
+              </div>
+              <div class="dish-footer">
+                <span class="dish-badge"><i class="fa-solid fa-star"></i> Recomendación Chef</span>
+                <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20pedir%20un%20D%C3%BCr%C3%BCm%20Kebab%20Especial." target="_blank" class="btn btn-whatsapp btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+
+            <div class="dish-card">
+              <div>
+                <div class="dish-header">
+                  <h3 class="dish-title">Adana Kebab</h3>
+                  <span class="dish-price">$32.000 COP</span>
+                </div>
+                <p class="dish-desc">Brocheta picante de carne molida a la parrilla de carbón, servida con arroz aromático turco, papas doradas y vegetales asados.</p>
+              </div>
+              <div class="dish-footer">
+                <span class="dish-badge">Picante Suave</span>
+                <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20pedir%20un%20Adana%20Kebab." target="_blank" class="btn btn-whatsapp btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TAB 2: Especiales -->
+        <div id="tab-especiales" class="tab-content">
+          <div class="dishes-grid">
+            
+            <div class="dish-card">
+              <div>
+                <div class="dish-header">
+                  <h3 class="dish-title">Plato Plato Ottoman Mix</h3>
+                  <span class="dish-price">$38.000 COP</span>
+                </div>
+                <p class="dish-desc">Combinación de carne Döner, Köfte a la parrilla, arroz basmati turco, papas crujientes, ensalada mediterránea y pan pita caliente.</p>
+              </div>
+              <div class="dish-footer">
+                <span class="dish-badge">Súper Completo</span>
+                <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20pedir%20el%20Plato%20Ottoman%20Mix." target="_blank" class="btn btn-whatsapp btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+
+            <div class="dish-card">
+              <div>
+                <div class="dish-header">
+                  <h3 class="dish-title">Köfte Tradicional Turco</h3>
+                  <span class="dish-price">$28.000 COP</span>
+                </div>
+                <p class="dish-desc">Albóndigas turcas de carne de res marinadas con especias otomanas, asadas al término perfecto, acompañadas de arroz y pan lavaş.</p>
+              </div>
+              <div class="dish-footer">
+                <span class="dish-badge">Tradición Pura</span>
+                <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20pedir%20Köfte%20Tradicional." target="_blank" class="btn btn-whatsapp btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TAB 3: Postres & Bebidas -->
+        <div id="tab-postres" class="tab-content">
+          <div class="dishes-grid">
+            
+            <div class="dish-card">
+              <div>
+                <div class="dish-header">
+                  <h3 class="dish-title">Baklava de Pistacho</h3>
+                  <span class="dish-price">$12.000 COP</span>
+                </div>
+                <p class="dish-desc">Crujientes capas de masa filo rellenas de finos pistachos turcos picados y bañadas en almíbar perfumado artesanal.</p>
+              </div>
+              <div class="dish-footer">
+                <span class="dish-badge">Postre Insignia</span>
+                <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20pedir%20un%20Baklava%20de%20Pistacho." target="_blank" class="btn btn-whatsapp btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+
+            <div class="dish-card">
+              <div>
+                <div class="dish-header">
+                  <h3 class="dish-title">Té Turco Tradicional (Çay)</h3>
+                  <span class="dish-price">$5.000 COP</span>
+                </div>
+                <p class="dish-desc">Infusión auténtica servida en el clásico vaso tulipa turco. Té negro aromático perfecto para finalizar la comida.</p>
+              </div>
+              <div class="dish-footer">
+                <span class="dish-badge">Bebida Oficial</span>
+                <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20pedir%20un%20T%C3%A9%20Turco%20Tradicional." target="_blank" class="btn btn-whatsapp btn-sm">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. GALERÍA DE PLATOS Y EXPERIENCIA
+         ========================================== -->
+    <section class="gallery-section" id="galeria">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-camera"></i> Experiencia Gastronómica</span>
+          <h2 class="section-title">Nuestra Galería de Especialidades</h2>
+          <p class="section-subtitle">Echa un vistazo a la preparación y presentación de nuestros auténticos manjares turcos.</p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- plato.jpg -->
+          <div class="gallery-card" onclick="openLightbox('plato.jpg', 'Baklava Tradicional & Postres Turcos')">
+            <img src="plato.jpg" alt="Baklava y Postres Turcos" onerror="this.onerror=null; this.src='plato.jpg.png';">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Postres</span>
+              <div class="gallery-caption">Baklava Tradicional & Dulces</div>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Quiero%20pedir%20postres%20Baklava." target="_blank" class="btn btn-whatsapp btn-sm gallery-btn" onclick="event.stopPropagation();">
+                <i class="fa-brands fa-whatsapp"></i> Pedir esto
+              </a>
+            </div>
+          </div>
+
+          <!-- plato2.jpg -->
+          <div class="gallery-card" onclick="openLightbox('plato2.jpg', 'Té Turco Tradicional (Çay)')">
+            <img src="plato2.jpg" alt="Té Turco Tradicional" onerror="this.onerror=null; this.src='plato2.jpg.png';">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bebida Tradicional</span>
+              <div class="gallery-caption">Té Turco (Çay) en Vaso Tulipa</div>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Quiero%20pedir%20un%20T%C3%A9%20Turco." target="_blank" class="btn btn-whatsapp btn-sm gallery-btn" onclick="event.stopPropagation();">
+                <i class="fa-brands fa-whatsapp"></i> Pedir esto
+              </a>
+            </div>
+          </div>
+
+          <!-- plato3.jpg -->
+          <div class="gallery-card" onclick="openLightbox('plato3.jpg', 'Mesa de Especialidades Otomanas')">
+            <img src="plato3.jpg" alt="Mesa de Especialidades" onerror="this.onerror=null; this.src='plato3.jpg.png';">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Banquete Turco</span>
+              <div class="gallery-caption">Mesa de Especialidades Otomanas</div>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Quiero%20informaci%C3%B3n%20sobre%20los%20platos%20especiales." target="_blank" class="btn btn-whatsapp btn-sm gallery-btn" onclick="event.stopPropagation();">
+                <i class="fa-brands fa-whatsapp"></i> Pedir esto
+              </a>
+            </div>
+          </div>
+
+          <!-- plato5.jpg -->
+          <div class="gallery-card" onclick="openLightbox('plato5.jpg', 'Plato Preparado de la Casa')">
+            <img src="plato5.jpg" alt="Plato Preparado de la Casa" onerror="this.onerror=null; this.src='plato5.jpg.png';">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Plato Fuerte</span>
+              <div class="gallery-caption">Plato Especialidad Ottoman</div>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Quiero%20pedir%20este%20plato%20especial." target="_blank" class="btn btn-whatsapp btn-sm gallery-btn" onclick="event.stopPropagation();">
+                <i class="fa-brands fa-whatsapp"></i> Pedir esto
+              </a>
+            </div>
+          </div>
+
+          <!-- plato6.jpg -->
+          <div class="gallery-card" onclick="openLightbox('plato6.jpg', 'Especialidad Turca a la Parrilla')">
+            <img src="plato6.jpg" alt="Especialidad Turca" onerror="this.onerror=null; this.src='plato6.jpg.png';">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Parrilla Turca</span>
+              <div class="gallery-caption">Especialidad Turca Artesanal</div>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20interesa%20la%20especialidad%20turca." target="_blank" class="btn btn-whatsapp btn-sm gallery-btn" onclick="event.stopPropagation();">
+                <i class="fa-brands fa-whatsapp"></i> Pedir esto
+              </a>
+            </div>
+          </div>
+
+          <!-- plato7.jpg -->
+          <div class="gallery-card" onclick="openLightbox('plato7.jpg', 'Döner Kebab con Papas y Arroz')">
+            <img src="plato7.jpg" alt="Döner Kebab con Acompañamientos" onerror="this.onerror=null; this.src='plato7.jpg.png';">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Combo Favorito</span>
+              <div class="gallery-caption">Döner Kebab, Papas & Arroz</div>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Quiero%20pedir%20el%20combo%20D%C3%B6ner%20con%20papas." target="_blank" class="btn btn-whatsapp btn-sm gallery-btn" onclick="event.stopPropagation();">
+                <i class="fa-brands fa-whatsapp"></i> Pedir esto
+              </a>
+            </div>
+          </div>
+
+          <!-- plato8.jpg -->
+          <div class="gallery-card" onclick="openLightbox('plato8.jpg', 'Kebab Especial y Acompañamientos')">
+            <img src="plato8.jpg" alt="Kebab Especial y Acompañamientos" onerror="this.onerror=null; this.src='plato8.jpg.png';">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Favorito de la Casa</span>
+              <div class="gallery-caption">Kebab Especial Ottoman</div>
+              <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Quiero%20pedir%20el%20Kebab%20Especial." target="_blank" class="btn btn-whatsapp btn-sm gallery-btn" onclick="event.stopPropagation();">
+                <i class="fa-brands fa-whatsapp"></i> Pedir esto
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="gallery-disclaimer">
+          <i class="fa-solid fa-info-circle"></i> *Fotografías preliminares de previsualización. Sujetas a actualización por imágenes definitivas de alta resolución.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. HORARIOS Y UBICACIÓN
+         ========================================== -->
+    <section class="info-section" id="ubicacion">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge"><i class="fa-solid fa-map-location-dot"></i> Visítanos</span>
+          <h2 class="section-title">Horarios y Ubicación en Bogotá</h2>
+          <p class="section-subtitle">Te esperamos en el Centro Comercial North Point Mall para brindarte la mejor atención.</p>
+        </div>
+
+        <div class="info-grid">
+          
+          <!-- Tarjeta de Ubicación -->
+          <div class="location-card">
+            <div class="location-header">
+              <div class="location-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h3>Encuéntranos Aquí</h3>
+                <p style="color: var(--text-muted);">Bogotá, Cundinamarca</p>
+              </div>
+            </div>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-item-icon"><i class="fa-solid fa-building"></i></div>
+                <div class="info-item-content">
+                  <strong>Centro Comercial North Point Mall</strong>
+                  <p>Carrera 7 #155-80, Local 28 B</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-item-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="info-item-content">
+                  <strong>Teléfono & Pedidos por WhatsApp</strong>
+                  <p>+57 302 212 1243</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-item-icon"><i class="fa-solid fa-coins"></i></div>
+                <div class="info-item-content">
+                  <strong>Precio Promedio por Persona</strong>
+                  <p>$20.000 – $40.000 COP</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=North+Point+Mall+Bogota+Carrera+7+155-80" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-compass"></i> Abrir en Google Maps
+            </a>
+          </div>
+
+          <!-- Tarjeta de Horarios -->
+          <div class="schedule-box">
+            <h3><i class="fa-solid fa-clock"></i> Horarios de Atención</h3>
+            
+            <div class="schedule-table">
+              <div class="schedule-row">
+                <span class="schedule-day">Lunes a Viernes</span>
+                <span class="schedule-time">12:00 p.m. – 6:30 p.m.</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-day">Sábado</span>
+                <span class="schedule-time">12:00 p.m. – 6:00 p.m.</span>
+              </div>
+              <div class="schedule-row closed">
+                <span class="schedule-day">Domingo</span>
+                <span class="schedule-time">Cerrado</span>
+              </div>
+            </div>
+
+            <div class="price-badge-box">
+              <span>Servicio de Pedidos Directos</span>
+              <strong>¡Disfruta en el local o pide para llevar por WhatsApp!</strong>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       6. FOOTER & BOTÓN FLOTANTE
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="logo-text">
+              OTTOMAN <span>Cocina Turca</span>
+            </div>
+          </div>
+          <p>Auténtica tradición culinaria de Turquía en Bogotá. Döner Kebab, Dürüm, Té Turco y Baklava elaborados diariamente con los mejores ingredientes.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Enlaces Rápidos</h4>
+          <div class="footer-links">
+            <a href="#inicio"><i class="fa-solid fa-chevron-right"></i> Inicio</a>
+            <a href="#menu"><i class="fa-solid fa-chevron-right"></i> Menú Digital</a>
+            <a href="#galeria"><i class="fa-solid fa-chevron-right"></i> Galería Gastronómica</a>
+            <a href="#ubicacion"><i class="fa-solid fa-chevron-right"></i> Horarios & Ubicación</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contacto Rápido</h4>
+          <div class="footer-links">
+            <a href="https://wa.me/573022121243" target="_blank"><i class="fa-brands fa-whatsapp"></i> +57 302 212 1243</a>
+            <span style="display: block; font-size: 0.9rem;"><i class="fa-solid fa-location-dot"></i> North Point Mall Local 28 B</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ottoman - Cocina Turca (Türk Mutfak). Todos los derechos reservados. North Point Mall, Bogotá.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante Verde de WhatsApp -->
+  <a href="https://wa.me/573022121243?text=Hola%20Ottoman!%20Me%20gustar%C3%ADa%20hacer%20un%20pedido." target="_blank" rel="noopener" class="floating-whatsapp" title="Pedir por WhatsApp" aria-label="Pedir por WhatsApp">
+    <span class="floating-badge">Pedir Aquí</span>
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Modal Lightbox Ampliador de Imágenes -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation();">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img src="" alt="Imagen Ampliada" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       JAVASCRIPT SIMPLE DE INTERACCIÓN
+       ========================================== -->
+  <script>
+    // Menú Hamburguesa Móvil
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      const icon = mobileToggle.querySelector('i');
+      if (navMenu.classList.contains('active')) {
+        icon.className = 'fa-solid fa-xmark';
+      } else {
+        icon.className = 'fa-solid fa-bars';
+      }
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        if (mobileToggle.querySelector('i')) {
+          mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+        }
+      });
+    });
+
+    // Pestañas (Tabs) de Menú
+    function switchTab(evt, tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      
+      evt.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // Modal Lightbox para imágenes del Menú y Galería
+    function openLightbox(imgSrc, captionText) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const caption = document.getElementById('lightboxCaption');
+
+      // Intentar cargar la imagen con fallback
+      img.onerror = function() {
+        if (!this.getAttribute('data-fallback')) {
+          this.setAttribute('data-fallback', 'true');
+          this.src = imgSrc + '.png';
+        }
+      };
+
+      img.src = imgSrc;
+      caption.textContent = captionText || '';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Escape Key listener for Lightbox
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+
+    // Active Navigation Link on Scroll
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const sections = document.querySelectorAll('section');
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
